@@ -9,6 +9,15 @@ const Pokemon = () => {
     }, [])
 
     const getPokemon = (e) => {
+        //fetch("https://pokeapi.co/api/v2/pokemon?limit=807")
+        //.then(res=> {
+            //return res.json()
+        //})
+        // .then(res=>{
+            //console.log(res)
+            //setAllPokemon(res.results)
+        //})
+        //.catch(err => console.log("error", err))
         axios.get("https://pokeapi.co/api/v2/pokemon?limit=2000")
             .then(res => {
                 setAllPokemon(res.data.results)
